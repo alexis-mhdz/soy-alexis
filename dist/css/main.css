@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+/* Reset */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.non-scroll {
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding-top: 1rem;
+}
+.navbar > .container-fluid, .navbar > .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+.navbar .navbar-toggler {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1000;
+}
+.navbar .navbar-toggler span {
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #000000;
+  transition: transform 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -moz-transition: transform 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -o-transition: transform 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.navbar .navbar-collapse {
+  flex-basis: 100%;
+  position: absolute;
+  background-color: #000000;
+  color: #ffffff;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  overflow-y: auto;
+}
+.navbar .navbar-collapse .navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.navbar .navbar-collapse .navbar-nav li.active {
+  font-weight: 700;
+}
+.navbar .navbar-collapse .navbar-nav li a {
+  padding: 0.325rem 0;
+  display: block;
+  color: #ffffff;
+}
+.navbar.active .navbar-brand {
+  color: #ffffff;
+}
+.navbar.active .navbar-toggler {
+  justify-content: center;
+}
+.navbar.active .navbar-toggler span {
+  background-color: #ffffff;
+}
+.navbar.active .navbar-toggler span:first-of-type {
+  transform: rotate(135deg);
+}
+.navbar.active .navbar-toggler span:last-of-type {
+  transform: rotate(-135deg);
+}
+.navbar.active .navbar-collapse {
+  display: block;
+}
+@media (min-width: 768px) {
+  .navbar .navbar-brand {
+    color: #000000 !important;
+  }
+  .navbar .navbar-toggler {
+    display: none;
+  }
+  .navbar .navbar-collapse {
+    position: static;
+    height: auto;
+    width: auto;
+    display: block;
+    padding-top: 0 !important;
+    flex-basis: auto;
+    background-color: transparent;
+  }
+  .navbar .navbar-collapse .navbar-nav {
+    display: flex;
+  }
+  .navbar .navbar-collapse .navbar-nav li a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  background-color: transparent;
+  display: inline-block;
+  padding: 1.2rem 1.5rem;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.btn.btn-black {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+.btn.btn-black:hover, .btn.btn-black:focus {
+  color: #000000;
+}
+.btn:hover, .btn:focus {
+  background-color: transparent;
+}
+
+/* Home */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#hero .hero-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#hero .hero-text h1 {
+  margin-bottom: 2rem;
+}
+#hero .hero-text h1 span {
+  display: block;
+  font-weight: 700;
+}
+#hero .hero-text p {
+  margin-bottom: 1.75rem;
+}
+#hero .hero-image {
+  background-image: url(/dist/img/pattern-randomized.svg);
+  background-size: cover;
+  background-position: fixed;
+  color: #ffffff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#hero .hero-image .image-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#hero .hero-image .image-content p {
+  margin: 0;
+  font-weight: 300;
+  animation: scroll-down-animation 1.2s infinite;
+}
+@keyframes scroll-down-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#hero .hero-image .image-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+#hero .hero-image .image-content ul li {
+  font-size: 1.4rem;
+}
+#hero .hero-image .image-content ul li:not(:last-of-type) {
+  margin-bottom: 0.35rem;
+}
+#hero .hero-image .image-content ul li a {
+  color: #ffffff;
+  margin-left: auto;
+}
+#hero .hero-image .image-content ul li a:hover, #hero .hero-image .image-content ul li a:focus {
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  #hero {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #hero .hero-text {
+    flex-basis: 50%;
+  }
+  #hero .hero-image {
+    flex-basis: 50%;
+  }
+  #hero .hero-image > .container-fluid {
+    height: 100%;
+  }
+  #hero .hero-image .image-content {
+    height: 100%;
+    align-items: flex-end;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
