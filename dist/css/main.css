@@ -256,7 +256,7 @@ body.non-scroll {
 #hero .hero-image {
   background-image: url(../img/pattern-randomized.svg);
   background-size: cover;
-  background-position: fixed;
+  background-attachment:fixed
   color: #ffffff;
   padding-top: 2rem;
   padding-bottom: 2rem;
