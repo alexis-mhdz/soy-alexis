@@ -254,7 +254,7 @@ body.non-scroll {
   margin-bottom: 1.75rem;
 }
 #hero .hero-image {
-  background-image: url(../dist/img/pattern-randomized.svg);
+  background-image: url(../img/pattern-randomized.svg);
   background-size: cover;
   background-position: fixed;
   color: #ffffff;
